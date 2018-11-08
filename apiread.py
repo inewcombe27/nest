@@ -1,8 +1,8 @@
 import http.client
 from urllib.parse import urlparse
-import get_auth
+import nestauth
 
-token = get_auth.code  # Update with your token
+token = nestauth.data  # Update with your token
 
 conn = http.client.HTTPSConnection("developer-api.nest.com")
 headers = {'authorization': "Bearer {0}".format(token)}
