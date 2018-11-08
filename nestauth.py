@@ -16,6 +16,6 @@ headers = {'content-type': "application/x-www-form-urlencoded"}
 conn.request("POST", "/oauth2/access_token", payload, headers)
 
 res = conn.getresponse()
-data = res.json()
+data = res.read()
 
 print (data)
