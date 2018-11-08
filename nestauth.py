@@ -16,6 +16,6 @@ def get_auth(code):
     conn.request("POST", "/oauth2/access_token", payload, headers)
     res = conn.getresponse()
     code = res.read()
-    print code
+    print (code)
 
 #print(code.decode("utf-8"))
