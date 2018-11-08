@@ -1,6 +1,5 @@
 import http.client
 from urllib.parse import urlparse
-import nestauth
 
 token = 'c.7ESa5B1r9fv6RTMtw8gr4dgqvltmKyM5jdTG7hWJ0BgfEx1kBfY46zINwA5fSmeblorJPV7fEPVJ7n4QFsklq5wm3YtTnZl85DvYZTDfBlR83YCGQ5fgzbhkrVWKIZvxOihUPqOCJzplohlA'  # Update with your token
 
