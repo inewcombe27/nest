@@ -11,9 +11,11 @@ print (payload)
 
 headers = {'content-type': "application/x-www-form-urlencoded"}
 
-conn.request("POST", "/oauth2/access_token", payload, headers)
 
-res = conn.getresponse()
-data = res.read()
+def get_auth(code):
+    conn.request("POST", "/oauth2/access_token", payload, headers)
+    res = conn.getresponse()
+    code = res.read()
+    return code
 
-print(data.decode("utf-8"))
+print(code.decode("utf-8"))
