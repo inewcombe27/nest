@@ -2,7 +2,7 @@ import http.client
 from urllib.parse import urlparse
 import nestauth
 
-token = nestauth.res['access_token']  # Update with your token
+token = nestauth.data["access_token"]  # Update with your token
 
 conn = http.client.HTTPSConnection("developer-api.nest.com")
 headers = {'authorization': "Bearer {0}".format(token)}
