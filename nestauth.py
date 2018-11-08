@@ -12,13 +12,9 @@ payload = "code=" + os.environ['AUTH_CODE'] + \
 headers = {'content-type': "application/x-www-form-urlencoded"}
 
 
-def get_auth(code):
-    conn.request("POST", "/oauth2/access_token", payload, headers)
-    res = conn.getresponse()
-    code = res.read()
-    print (code.decode("utf-8"))
+conn.request("POST", "/oauth2/access_token", payload, headers)
 
+res = conn.getresponse()
+data = res.read()
 
-get_auth
-
-#print(code.decode("utf-8"))
+print(data.decode("utf-8"))
