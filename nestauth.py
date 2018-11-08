@@ -18,4 +18,7 @@ def get_auth(code):
     code = res.read()
     print (code.decode("utf-8"))
 
+
+get_auth
+
 #print(code.decode("utf-8"))
