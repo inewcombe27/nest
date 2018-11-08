@@ -5,7 +5,7 @@ conn = http.client.HTTPSConnection("api.home.nest.com")
 
 payload = "code =" + os.environ['AUTH_CODE'] + \
     "&client_id=" + os.environ['CLIENT_ID']+"&client_secret=" \
-    + os.environ['CLIENT_SECRET'] + "&grant_type=authorization_code"
+    + os.environ['client_secret'] + "&grant_type=authorization_code"
 
 print (payload)
 
