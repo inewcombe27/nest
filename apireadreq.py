@@ -3,7 +3,7 @@ from urllib.parse import urlparse
 import authreq
 import json
 
-token = os.environ['AUTH_TOKEN]  # Update with your token
+token = os.environ['AUTH_TOKEN']  # Update with your token
 
 r = requests.get('https://developer-api.nest.com', params=token)
 
