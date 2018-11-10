@@ -14,6 +14,7 @@ def thermo_write(dev_id, tparm, tvalue):
 
     response = requests.put(url, headers=headers, data=payload,
                             allow_redirects=False)
+    print (r.url)
 
     if response.status_code == 307:  # indicates a redirect is needed
         response = requests.put(response.headers['Location'],
