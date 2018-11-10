@@ -21,7 +21,7 @@ response = requests.get(url, headers=headers, allow_redirects=False)
 #                     allow_redirects=False)
 #
 # data = resp.text
-print response.json()
+print (response.json())
 # if r.status == 307:
 #     redirectLocation = urlparse(response.getheader("location"))
 #     conn = http.client.HTTPSConnection(redirectLocation.netloc)
