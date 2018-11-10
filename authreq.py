@@ -7,7 +7,7 @@ payload = {'code': os.environ['AUTH_CODE'],
 
 print (payload)
 
-auth = requests.post('https://api.home.nest.com/oauth2/access_token',
+authr = requests.post('https://api.home.nest.com/oauth2/access_token',
         params=payload)
 
-print (auth.url)
+print (authr.text)
