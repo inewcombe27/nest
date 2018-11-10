@@ -2,6 +2,7 @@ import requests
 from urllib.parse import urlparse
 import authreq
 import json
+import os
 
 token = os.environ['AUTH_TOKEN']  # Update with your token
 
