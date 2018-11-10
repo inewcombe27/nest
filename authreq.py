@@ -13,6 +13,6 @@ authr = requests.post('https://api.home.nest.com/oauth2/access_token',
 
 authcode = authr.json()
 
-print (authcode["access_token"])
+print (authcode['access_token'])
 
 os.environ['AUTH_TOKEN'] = authcode["access_token"]
