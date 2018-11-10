@@ -2,7 +2,7 @@ import requests
 import os
 import config
 
-payload = {'code': os.environ['AUTH_CODE'],
+payload = {'code': config.auth_token,
            'client_id': config.client_id, 'client_secret':
            config.client_secret, 'grant_type': 'authorization_code'}
 
