@@ -12,4 +12,5 @@ response = requests.get('https://developer-api.nest.com/', headers=token,
 if response.status_code == 307:
      response = requests.get(response.headers['Location'], headers=token, allow_redirects=False)
 
-print (response.text)
+data = resonse.json()
+print (data["target_temperature_f"]
