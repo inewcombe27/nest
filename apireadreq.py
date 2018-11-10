@@ -1,7 +1,8 @@
 import requests
 import os
+import config
 
-token = {'Authorization': 'Bearer {0}'.format(os.environ['AUTH_TOKEN']),
+token = {'Authorization': 'Bearer {0}'.format(config.auth_token),
          'Content-Type': 'application/json'}  # Update with your token
 
 
