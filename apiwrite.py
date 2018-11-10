@@ -9,7 +9,7 @@ def thermo_write(dev_id, tparm, tvalue):
 
     # payload = "{'\\' tparm: tvalue '\\'}"
     payload = "{" + tparm + ":" + tvalue + "}"
-
+    print (payload)
     headers = {'Authorization': 'Bearer {0}'.format(token),
                'Content-Type': 'application/json'}
 
