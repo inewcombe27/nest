@@ -1,6 +1,6 @@
 import requests
 from urllib.parse import urlparse
-import nestauth
+import authreq
 
 token = {'authorization': authreq.authr["access_token"]}  # Update with your token
 
