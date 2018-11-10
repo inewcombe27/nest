@@ -19,5 +19,5 @@ r = requests.get('https://developer-api.nest.com/', headers=token, allow_redirec
 #     if response.status != 200:
 #         raise Exception("Redirect with non 200 response")
 
-data = r.text
-print(data)
+# data = r.text
+print(r.text)
