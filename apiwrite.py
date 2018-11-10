@@ -7,7 +7,8 @@ def thermo_write(dev_id, tparm, tvalue):
 
     token = config.auth_token  # Update with your token
 
-    payload = "{'\\' tparm: tvalue '\\'}"
+    # payload = "{'\\' tparm: tvalue '\\'}"
+    payload = "{\"temperature_scale\": \"F\"}"
 
     headers = {'Authorization': 'Bearer {0}'.format(token),
                'Content-Type': 'application/json'}
