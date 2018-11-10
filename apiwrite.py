@@ -1,17 +1,25 @@
 import requests
-import os
 import config
 
-url = "https://developer-api.nest.com/devices/thermostats/" + config.down_id
 
-token = config.auth_token# Update with your token
+def thermo_write(dev_id, tparm, tvalue):
+    url = "https://developer-api.nest.com/devices/thermostats/" + dev_id
 
-payload = "{\"target_temperature_f\": 70}"
+    token = config.auth_token  # Update with your token
 
-headers = {'Authorization': 'Bearer {0}'.format(token), 'Content-Type': 'application/json'}
+    payload = "{"/"parm: tvalue}"
 
-response = requests.put(url, headers=headers, data=payload, allow_redirects=False)
-if response.status_code == 307: # indicates a redirect is needed
-    response = requests.put(response.headers['Location'], headers=headers, data=payload, allow_redirects=False)
+    headers = {'Authorization': 'Bearer {0}'.format(token),
+               'Content-Type': 'application/json'}
 
-print(response.text)
+    response = requests.put(url, headers=headers, data=payload,
+                            allow_redirects=False)
+
+    if response.status_code == 307:  # indicates a redirect is needed
+        response = requests.put(response.headers['Location'],
+                                headers=headers, data=payload,
+                                allow_redirects=False)
+    print(response.text)
+
+
+thermo_write(config.down_id, "target_temperature_f", 69)
