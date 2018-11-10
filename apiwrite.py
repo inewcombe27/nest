@@ -6,7 +6,7 @@ url = "https://developer-api.nest.com/devices/thermostats/" + config.down_id
 
 token = config.auth_token# Update with your token
 
-payload = "{\"target_temperature_f\": 78}"
+payload = "{\"target_temperature_f\": 70}"
 
 headers = {'Authorization': 'Bearer {0}'.format(token), 'Content-Type': 'application/json'}
 
