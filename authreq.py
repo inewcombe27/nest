@@ -1,5 +1,6 @@
 import requests
 import os
+import json
 
 payload = {'code': os.environ['AUTH_CODE'],
         'client_id': os.environ['PRODUCT_ID'], 'client_secret': os.environ
@@ -12,4 +13,4 @@ authr = requests.post('https://api.home.nest.com/oauth2/access_token',
 
 authcode = authr.json()
 
-print (authr.text)
+print (authr["access_token"])
