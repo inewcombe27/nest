@@ -2,7 +2,7 @@ import requests
 from urllib.parse import urlparse
 import authreq
 
-token = {'authorization': authreq.authr["access_token"]}  # Update with your token
+token = {'authorization': authreq.authcode["access_token"]}  # Update with your token
 
 r = requests.get('https://developer-api.nest.com', params=token)
 
