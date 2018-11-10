@@ -10,7 +10,7 @@ token = {'Authorization': 'Bearer {0}'.format(os.environ['AUTH_TOKEN']),
 r = requests.get('https://developer-api.nest.com/', headers=token,
                 allow_redirects=False)
 
-
+print (r.text)
 # if r.status == 307:
 #     redirectLocation = urlparse(response.getheader("location"))
 #     conn = http.client.HTTPSConnection(redirectLocation.netloc)
@@ -20,4 +20,3 @@ r = requests.get('https://developer-api.nest.com/', headers=token,
 #         raise Exception("Redirect with non 200 response")
 
 # data = r.text
-print (r.text)
