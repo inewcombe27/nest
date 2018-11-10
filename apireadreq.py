@@ -1,8 +1,9 @@
 import requests
+import os
 # from urllib.parse import urlparse
 
 
-token = "c.7g6kZcnQY41pYILaNqZMYYXcLNYIfSjbnCAKYLYAGX6KZ1R6iLCPT0E1oH1UIh6JL7ph9Xi56IYhAYcsxbqASpwJVnu8x0ZwnOP3FcbUOR7fWtmUcZppUFBs9msfIVCGfYfKtXiEUbsvbvYx"  # Update with your token
+token = {'Authorization': os.environ['AUTH_TOKEN']}  # Update with your token
 
 r = requests.get('https://developer-api.nest.com', params=token)
 
