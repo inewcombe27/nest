@@ -6,9 +6,11 @@ def thermo_write(dev_id, tparm, tvalue):
     url = "https://developer-api.nest.com/devices/thermostats/" + dev_id
 
     token = config.auth_token  # Update with your token
-
+    payload = "{\"temperature_scale\": \"F\"}"
     # payload = "{'\\' tparm: tvalue '\\'}"
-    payload = {'\\'parm '\\': '\\'tvalue '\\'}
+    payload = "{ tparm : tvalue}"
+
+
 
     headers = {'Authorization': 'Bearer {0}'.format(token),
                'Content-Type': 'application/json'}
