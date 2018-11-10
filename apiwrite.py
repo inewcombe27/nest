@@ -8,7 +8,7 @@ def thermo_write(dev_id, tparm, tvalue):
     token = config.auth_token  # Update with your token
 
     # payload = "{'\\' tparm: tvalue '\\'}"
-    payload = "{" + tparm + ":" + tvalue + "}"
+    payload = "{" + tparm + ":" + str(tvalue) + "}"
 
 
 
