@@ -3,9 +3,9 @@ import os
 
 conn = http.client.HTTPSConnection("api.home.nest.com")
 
-payload = {'code' : os.environ['AUTH_CODE'], \
-    'client_id':os.environ['PRODUCT_ID'], 'client_secret' : os.environ\
-    ['PRODUCT_SECRET'], 'grant_type'= 'authorization_code'}
+payload = {'code': os.environ['AUTH_CODE'],
+        'client_id': os.environ['PRODUCT_ID'], 'client_secret': os.environ
+        ['PRODUCT_SECRET'], 'grant_type': 'authorization_code'}
 
 print (payload)
 
