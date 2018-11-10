@@ -22,4 +22,4 @@ def thermo_write(dev_id, tparm, tvalue):
     print(response.text)
 
 
-thermo_write(config.down_id, "target_temperature_f\", 69)
+thermo_write(config.down_id, "target_temperature_f'\\", 69)
