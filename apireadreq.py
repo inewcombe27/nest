@@ -13,4 +13,4 @@ if response.status_code == 307:
      response = requests.get(response.headers['Location'], headers=token, allow_redirects=False)
 
 data = response.json()
-print (data["target_temperature_f"])
+print (data['target_temperature_f'])
