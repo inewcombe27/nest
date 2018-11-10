@@ -3,7 +3,8 @@ import os
 # from urllib.parse import urlparse
 
 
-token = {'Authorization': 'Bearer {0}'.format(os.environ['AUTH_TOKEN'])}  # Update with your token
+token = {'Authorization': 'Bearer {0}'.format(os.environ['AUTH_TOKEN']),
+        'Content-Type': 'application/json'}  # Update with your token
 
 r = requests.get('https://developer-api.nest.com', params=token)
 
