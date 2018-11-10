@@ -7,7 +7,7 @@ def thermo_write(dev_id, tparm, tvalue):
 
     token = config.auth_token  # Update with your token
 
-    payload = "{parm: tvalue}"
+    payload = "{"\" tparm: tvalue "\"}"
 
     headers = {'Authorization': 'Bearer {0}'.format(token),
                'Content-Type': 'application/json'}
@@ -22,4 +22,4 @@ def thermo_write(dev_id, tparm, tvalue):
     print(response.text)
 
 
-thermo_write(config.down_id, "target_temperature_f", 69)
+thermo_write(config.down_id, "target_temperature_f\", 69)
